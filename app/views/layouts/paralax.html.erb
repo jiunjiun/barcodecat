@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <title>Hawa</title>
+
+    <%= stylesheet_link_tag  'paralax', media: 'all' %>
+
+</head>
+<body>
+  <%= render 'paralax_common/loading' %>
+  <%= render 'paralax_common/header' %>
+
+  <%= yield %>
+
+  <%= render 'paralax_common/footer' %>
+
+  <%= javascript_include_tag 'paralax' %>
+</body>
+</html>
