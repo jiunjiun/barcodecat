@@ -1,0 +1,31 @@
+== render partial: 'admin/common/breadcrumb', locals: {breadcrumbs: [{title: t('event')}], headers: {title: t('event'), right_title: {title: t('helpers.add'), link: new_admin_event_path}}}
+
+.row
+  .col-lg-12
+    table#dealers-table.table.table-striped
+      thead
+        tr
+          th.col-md-2
+          th.col-md-7.text-center data-name="title"
+            = t('simple_form.labels.event.title')
+          th.col-md-1.text-center data-name="enable"
+            = t('simple_form.labels.event.enable')
+          th.col-md-2.text-center data-name="created_at"
+            = t('simple_form.labels.event.created_at')
+      tbody
+      - events.each do |event|
+        tr
+          td
+            .btn-group
+              = link_to admin_event_path(event), class: 'btn btn-xs btn-primary btn-3d' do
+                = t('helpers.show')
+              = link_to edit_admin_event_path(event), class: 'btn btn-xs btn-info btn-3d' do
+                = t('helpers.edit')
+              = link_to admin_event_path(event), method: :delete, data: {confirm: t('helpers.are_you_sure')}, class: 'btn btn-xs btn-danger btn-3d' do
+                = t('helpers.delete')
+          td.text-center
+            = event.title
+          td.text-center
+            b.text-danger= event.enable ? 'Yes' : 'No'
+          td.text-center
+            = l event.created_at, format: :ymds

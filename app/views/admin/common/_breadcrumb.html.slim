@@ -1,0 +1,17 @@
+- unless breadcrumbs.size == 1
+  ol.breadcrumb.page-breadcrumb
+    - breadcrumbs.each_with_index do |breadcrumb, i|
+      li class="#{(breadcrumbs.size-1) == i ? 'active' : ''}"
+        - if breadcrumb[:link].present?
+          = link_to breadcrumb[:title], breadcrumb[:link]
+        - else
+          = breadcrumb[:title]
+
+.page-header
+  .pull-left
+      h1
+        = headers[:title]
+  - Rails.logger.debug { " -- #{headers.to_json}" }
+  - if headers[:right_title].present?
+    .pull-right
+      = link_to headers[:right_title][:title], headers[:right_title][:link], class: 'btn btn-primary btn-flat'

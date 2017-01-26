@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   devise_for :admins
   namespace :admin, path: '/', constraints: {subdomain: "admin"} do
     root 'dashboard#index'
+
+    resources :events do
+      resources :products
+    end
   end
 
   root 'home#index'
