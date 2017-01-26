@@ -42,6 +42,7 @@ zh-TW:
 
     successfully_created : '新增成功' # Your profile was successfully created.
     successfully_updated : '更新成功' # Your profile was successfully updated.
+    successfully_destroy : '刪除成功' # Your profile was successfully destroy.
     create_fail          : '新增失敗'
     update_fail          : '更新失敗'
 

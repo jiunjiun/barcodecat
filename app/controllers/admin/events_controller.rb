@@ -14,7 +14,7 @@ class Admin::EventsController < AdminController
 
   def create
     if event.save
-      redirect_to admin_event_path event
+      redirect_to admin_event_path(event), notice: t('helpers.successfully_created')
     else
       render :new
     end
@@ -25,7 +25,7 @@ class Admin::EventsController < AdminController
 
   def update
     if event.update event_params
-      redirect_to admin_event_path event
+      redirect_to admin_event_path(event), notice: t('helpers.successfully_updated')
     else
       render :new
     end
@@ -33,7 +33,7 @@ class Admin::EventsController < AdminController
 
   def destroy
     event.destroy
-    redirect_to admin_events_path
+    redirect_to admin_events_path, notice: t('helpers.successfully_destroy')
   end
 
   private

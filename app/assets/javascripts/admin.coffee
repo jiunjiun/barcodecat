@@ -3,6 +3,8 @@
 #= require PixelAdmin/bootstrap
 #= require PixelAdmin/pixeladmin.min
 
+#= require noty
+
 #= require_tree ./admin
 #= require_self
 
