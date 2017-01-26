@@ -4,6 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :url
       t.integer :index
+      t.string :banner
       t.references :event, foreign_key: true
 
       t.timestamps
