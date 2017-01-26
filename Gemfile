@@ -79,6 +79,9 @@ gem 'google-analytics-rails'
 # form
 gem 'simple_form'
 
+# upload
+gem 'carrierwave', '~> 1.0'
+
 #
 gem 'active_hash'
 gem 'decent_exposure', '3.0.0.beta2'
