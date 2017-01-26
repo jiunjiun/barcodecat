@@ -73,6 +73,9 @@ end
 gem 'devise'
 gem 'devise-i18n'
 
+# i18n
+gem "rails-i18n"
+
 # Use for google analytics
 gem 'google-analytics-rails'
 
