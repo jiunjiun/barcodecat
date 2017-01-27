@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20170126095120) do
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "desc"
-    t.string   "url_name"
+    t.string   "link_name"
     t.boolean  "enable",     default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false

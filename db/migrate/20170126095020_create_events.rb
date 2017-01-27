@@ -3,7 +3,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
     create_table :events do |t|
       t.string :title
       t.string :desc
-      t.string :url_name
+      t.string :link_name
       t.boolean :enable, default: false
 
       t.timestamps
