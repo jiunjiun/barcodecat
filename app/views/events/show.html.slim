@@ -1,0 +1,13 @@
+- event.products.each do |product|
+  .row
+    .col-sm-12
+      .hawa-banner.text-center.buttons-modern
+        == image_tag product.banner, class: 'img-fixed'
+        .content.col-md-12
+          .titles
+            h2.title
+              = product.name
+              br>/
+              | Leaf
+          .buttons-buttom
+            = link_to '', product.url, class: 'arrow-link white'
