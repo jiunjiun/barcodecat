@@ -1,6 +1,6 @@
 == render partial: 'admin/common/breadcrumb', locals: {breadcrumbs: [{title: t('event'), link: admin_events_path}, {title: event.title}], headers: {title: event.title, right_title: {title: t('helpers.edit'), link: edit_admin_event_path(event)}}}
 
-.row
+.row#show data-id=event.id
   .col-md-12
     .panel.colourable
       /! Default panel contents
@@ -11,24 +11,24 @@
         table.table
           tbody
             tr
-              td.col-md-4.thick.underline
+              td.col-md-4
                 = t('simple_form.labels.event.enable')
               td.col-md-8
                 b.text-danger= event.enable ? 'Yes' : 'No'
             tr
-              td.col-md-4.thick.underline
+              td.col-md-4
                 = t('simple_form.labels.event.title')
               td.col-md-8= event.title
             tr
-              td.col-md-4.thick.underline
+              td.col-md-4
                 = t('simple_form.labels.event.desc')
               td.col-md-8= event.desc
             tr
-              td.col-md-4.thick.underline
-                = t('simple_form.labels.event.url_name')
-              td.col-md-8= event.url_name
+              td.col-md-4
+                = t('simple_form.labels.event.link_name')
+              td.col-md-8= event.link_name
             tr
-              td.col-md-4.thick.underline
+              td.col-md-4
                 = t('simple_form.labels.event.created_at')
               td.col-md-8= l event.created_at, format: :ymds
 
@@ -43,9 +43,21 @@
       .panel-body
         /! Table
         table.table
-          tbody
+          thead
+            tr
+              th.col-md-2
+              th.col-md-2.text-center= t('simple_form.labels.product.name')
+              th.col-md-9.text-center= t('simple_form.labels.product.url')
+          tbody#sortable_products
             - event.products.each do |product|
-              tr
-                td.col-md-4.thick.underline
-                  = t('simple_form.labels.product.name')
-                td.col-md-8= product.name
+              tr data-id=product.id
+                td
+                  .btn-group
+                    = link_to admin_event_product_path(event, product), class: 'btn btn-xs btn-primary btn-3d' do
+                      = t('helpers.show')
+                    = link_to edit_admin_event_product_path(event, product), class: 'btn btn-xs btn-info btn-3d' do
+                      = t('helpers.edit')
+                    = link_to admin_event_product_path(product), method: :delete, data: {confirm: t('helpers.are_you_sure')}, class: 'btn btn-xs btn-danger btn-3d' do
+                      = t('helpers.delete')
+                td.text-center= product.name
+                td.text-center= product.url

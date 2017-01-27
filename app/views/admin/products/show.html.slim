@@ -1,0 +1,25 @@
+== render partial: 'admin/common/breadcrumb', locals: {breadcrumbs: [{title: t('product'), link: admin_events_path}, {title: event.title, link: admin_event_path(event)}, {title: product.name}], headers: {title: product.name, right_title: {title: t('helpers.edit'), link: edit_admin_event_product_path(event, product)}}}
+
+.row
+  .col-md-12
+    .panel.colourable
+      /! Default panel contents
+      .panel-heading
+        span.panel-title= t('simple_form.labels.product.info')
+      .panel-body
+        /! Table
+        table.table
+          tbody
+            tr
+              td.col-md-4
+                = t('simple_form.labels.product.name')
+              td.col-md-8= product.name
+            tr
+              td.col-md-4
+                = t('simple_form.labels.product.url')
+              td.col-md-8= product.url
+            tr
+              td.col-md-4
+                = t('simple_form.labels.product.banner')
+              td.col-md-8
+                == image_tag product.banner

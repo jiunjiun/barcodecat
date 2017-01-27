@@ -1,0 +1,17 @@
+== simple_form_for([:admin, event, product]) do |f|
+  .panel.colourable
+    .panel-heading
+      span.panel-title= t('simple_form.labels.product.info')
+    .panel-body
+      == f.input :name, required: true
+      == f.input :url, required: true, as: :url
+      == f.input :banner, as: :file
+      - if product.banner.present?
+        == image_tag product.banner
+
+  br/
+  .row
+    .col-md-12
+      == f.button :submit, class: 'btn-success btn-3d'
+      | &nbsp;&nbsp;
+      == link_to t('helpers.back'), admin_event_path(event), class: 'btn btn-default btn-3d'

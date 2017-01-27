@@ -68,12 +68,14 @@ zh-TW:
         info:       '活動資訊'
         title:      '標題'
         desc:       '描述'
-        url_name:   '網址名稱'
+        link_name:   '網址名稱'
         enable:     '公開'
         created_at: '建立時間'
       product:
         info:       '商品資訊'
         name:       '商品名稱'
+        url:        '商品連結'
+        banner:     '商品圖片'
     placeholders:
       user:
 

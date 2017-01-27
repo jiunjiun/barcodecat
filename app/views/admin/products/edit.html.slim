@@ -1,0 +1,4 @@
+== render partial: 'admin/common/breadcrumb', locals: {breadcrumbs: [{title: t('event'), link: admin_events_path}, {title: event.title, link: admin_event_path(event)}, {title: t('helpers.edit')}], headers: {title: product.name}, right_title: nil}
+.row
+  .col-lg-12
+    == render 'form'
