@@ -92,6 +92,10 @@ gem "settingslogic"
 # SEO meta
 gem 'meta-tags'
 
+# pagination
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
+
 #
 gem 'active_hash'
 gem 'decent_exposure', '3.0.0.beta2'
