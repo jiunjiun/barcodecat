@@ -16,5 +16,5 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get 'e/:link_name', to: 'events#show'
+  get 'e/:link_name', to: 'events#show', as: 'event'
 end
