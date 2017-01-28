@@ -11,8 +11,8 @@ class Admin::ProductsController < AdminController
 
   def create
     product = event.products.build(product_params)
-    if product.save!
-      redirect_to admin_event_product_path(params[:event_id], product), notice: t('helpers.successfully_created')
+    if product.save
+      redirect_to admin_event_path(params[:event_id]), notice: t('helpers.successfully_created')
     else
       render :new
     end
@@ -23,7 +23,7 @@ class Admin::ProductsController < AdminController
 
   def update
     if product.update product_params
-      redirect_to admin_event_product_path(params[:event_id], product), notice: t('helpers.successfully_updated')
+      redirect_to admin_event_path(params[:event_id], product), notice: t('helpers.successfully_updated')
     else
       render :edit
     end
@@ -45,6 +45,6 @@ class Admin::ProductsController < AdminController
 
   private
   def product_params
-    params.require(:product).permit(:name, :url, :banner, :event_id, :index)
+    params.require(:product).permit(:name, :desc, :url, :banner, :event_id, :index)
   end
 end

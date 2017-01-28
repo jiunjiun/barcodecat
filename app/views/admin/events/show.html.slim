@@ -14,7 +14,19 @@
               td.col-md-4
                 = t('simple_form.labels.event.enable')
               td.col-md-8
-                b.text-danger= event.enable ? 'Yes' : 'No'
+                - if event.enable
+                  b.text-success Yes
+                - else
+                  b.text-danger No
+            tr
+              td.col-md-4
+                = t('simple_form.labels.event.link_name')
+              td.col-md-8
+                = event.link_name
+                | &nbsp;-&nbsp;
+                = link_to t('helpers.preview'), event_url(event.link_name), target: '_blank'
+                | &nbsp;&nbsp;
+                = link_to t('helpers.production_view'), event_url(event.link_name, subdomain: nil), target: '_blank'
             tr
               td.col-md-4
                 = t('simple_form.labels.event.title')
@@ -23,10 +35,6 @@
               td.col-md-4
                 = t('simple_form.labels.event.desc')
               td.col-md-8= event.desc
-            tr
-              td.col-md-4
-                = t('simple_form.labels.event.link_name')
-              td.col-md-8= event.link_name
             tr
               td.col-md-4
                 = t('simple_form.labels.event.created_at')

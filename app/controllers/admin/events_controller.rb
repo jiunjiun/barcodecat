@@ -1,6 +1,6 @@
 class Admin::EventsController < AdminController
 
-  expose :events, -> { Event.all.order(created_at: :desc) }
+  expose :events, -> { Event.all.order(created_at: :desc).paginate(:page => params[:page], per_page: 30) }
   expose :event
 
   def index

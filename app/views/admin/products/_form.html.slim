@@ -4,6 +4,7 @@
       span.panel-title= t('simple_form.labels.product.info')
     .panel-body
       == f.input :name, required: true
+      == f.input :desc, required: false
       == f.input :url, required: true, as: :url
       == f.input :banner, as: :file
       - if product.banner.present?
