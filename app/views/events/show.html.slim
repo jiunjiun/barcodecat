@@ -1,4 +1,4 @@
-.bg-white.button-elem
+.bg-gofun.button-elem
   .container-fluid.no-padd
     .row
       .col-md-12
@@ -12,10 +12,11 @@
   .row
     .col-sm-12
       .hawa-banner.text-center.buttons-modern
-        == image_tag product.banner, class: 'img-fixed'
+        == image_tag product.banner, class: 'img-fixed', alt: product.name
         .content.col-md-12
           .titles
             h2.title= product.name
+            br/
             p= product.desc
           .buttons-buttom
-            = link_to t('helpers.buy'), product.url, class: 'black white'
+            = link_to t('helpers.buy'), product.url, class: 'black white', target: '_blank'
