@@ -84,8 +84,13 @@ gem 'simple_form'
 
 # upload
 gem 'carrierwave', '~> 1.0'
-
 gem 'mini_magick'
+
+# Settings
+gem "settingslogic"
+
+# SEO meta
+gem 'meta-tags'
 
 #
 gem 'active_hash'
