@@ -92,6 +92,12 @@ gem "settingslogic"
 # SEO meta
 gem 'meta-tags'
 
+# sitemap
+gem 'sitemap_generator'
+
+# crontab
+gem 'whenever', :require => false
+
 # pagination
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
