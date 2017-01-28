@@ -22,4 +22,5 @@
               td.col-md-4
                 = t('simple_form.labels.product.banner')
               td.col-md-8
-                == image_tag product.banner
+                == link_to product.banner.url, target: '_blank' do
+                  == image_tag product.banner.small, class: 'img-thumbnail'

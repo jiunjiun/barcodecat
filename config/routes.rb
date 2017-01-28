@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root 'dashboard#index'
 
     resources :events do
-      resource :products do
+      resources :products do
         collection do
           put :update_index
         end
