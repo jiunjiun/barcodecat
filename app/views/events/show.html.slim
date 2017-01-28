@@ -1,3 +1,13 @@
+.bg-white.button-elem
+  .container-fluid.no-padd
+    .row
+      .col-md-12
+        .hawa-page-header.empty-image.empty-light
+          .title-blog-banner.static
+            .container
+              h1.title= event.title
+              p= event.desc
+
 - event.products.each do |product|
   .row
     .col-sm-12
@@ -5,9 +15,7 @@
         == image_tag product.banner, class: 'img-fixed'
         .content.col-md-12
           .titles
-            h2.title
-              = product.name
-              br>/
-              | Leaf
+            h2.title= product.name
+            p= product.desc
           .buttons-buttom
-            = link_to '', product.url, class: 'arrow-link white'
+            = link_to t('helpers.buy'), product.url, class: 'black white'

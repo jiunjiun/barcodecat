@@ -11,20 +11,20 @@ class ApplicationController < ActionController::Base
     keywords    = opts[:keywords]
 
     defaults = {
-      #Share
+      # common
       title: title,
       site: site,
       description: description,
       keywords: keywords,
 
-      #Facebook
+      # facebook
       og: {
         title: site.present? ? "#{site} | #{title}" : title,
         description: description,
         url: request.original_url,
         site_name: title,
-        type: opts[:type]   || 'website',
-        # image: opts[:image] || "#{request.base_url}/vidol_fb_kv.png"
+        type: opts[:type] || 'website',
+        image: opts[:image]
       }
     }
 

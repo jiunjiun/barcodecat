@@ -3,13 +3,34 @@ class EventsController < ApplicationController
 
   expose :event, -> { find_event }
 
+  before_action :verify_event
+  before_action :update_meta_tags
+
   def show
   end
 
   private
   def find_event
-    Event.find_by_link_name(params[:link_name]) || Event.last
+    link_name = params[:link_name]
+    _event = Event.where(link_name: link_name)
+    _event = _event.where(enable: true) unless admin_signed_in?
+
+    _event.last
+  end
+
+  def verify_event
+    redirect_to event_path(Event.where(enable: true).last.link_name) and return if event.blank?
   rescue
-    Event.last
+    redirect_to root_path
+  end
+
+  def update_meta_tags
+    meta_tags_option = {
+      site: event.title,
+      description: event.desc,
+      keywords: '',
+    }
+
+    prepare_meta_tags meta_tags_option
   end
 end
