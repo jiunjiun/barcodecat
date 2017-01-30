@@ -5,6 +5,8 @@ zh-TW:
   sign_in      : '登入'
   sign_out     : '登出'
 
+  top_recommend: '強檔推薦'
+
   # 後台
   backend:      '後台'
   back_fontend: '回前台'

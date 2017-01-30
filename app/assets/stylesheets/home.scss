@@ -1,3 +1,21 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//= require hawa/bootstrap.min
+//= require hawa/bootstrap-select.min
+//= require hawa/animsition.min
+//= require hawa/et-line-font
+//= require hawa/fontawesome-iconpicker.min
+//= require hawa/magnific-popup
+//= require hawa/menu-responsive
+//= require hawa/styles
+//= require hawa/yura
+//= require hawa/prettyPhoto
+
+@import "font-awesome";
+
+
+.bg_one_page_text_ticker {
+  background-image: image-url('banner.jpg');
+}
