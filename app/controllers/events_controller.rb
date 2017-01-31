@@ -28,7 +28,8 @@ class EventsController < ApplicationController
     meta_tags_option = {
       site: event.title,
       description: event.desc,
-      keywords: '',
+      keywords: event.keywords,
+      image: event.image,
     }
 
     prepare_meta_tags meta_tags_option
