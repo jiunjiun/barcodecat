@@ -70,12 +70,18 @@ zh-TW:
   simple_form:
     labels:
       event:
-        info:       '活動資訊'
-        title:      '標題'
-        desc:       '描述'
-        link_name:   '網址名稱'
-        enable:     '公開'
-        created_at: '建立時間'
+        info:           '活動資訊'
+        title:          '標題'
+        desc:           '描述 (description) - 描述的字數以120字左右為佳'
+        desc_abbr:      '描述'
+        link_name:      '網址名稱'
+        enable:         '公開'
+        created_at:     '建立時間'
+        seo_info:       'SEO設定'
+        keywords:       '關鍵字 (keywords) - 輸入格式用逗號(,)隔開'
+        image:          '活動主要圖片 (og:image)'
+        keywords_abbr:  '關鍵字 (keywords)'
+
       product:
         info:       '商品資訊'
         name:       '商品名稱'
@@ -83,6 +89,7 @@ zh-TW:
         url:        '商品連結'
         banner:     '商品圖片'
     placeholders:
-      user:
+      event:
+        keywords: '最強,彩妝,前十名'
 
 

@@ -16,6 +16,15 @@
               .switcher-no NO
             = t('simple_form.labels.event.enable')
 
+  .panel.colourable
+    .panel-heading
+      span.panel-title= t('simple_form.labels.event.seo_info')
+    .panel-body
+      == f.input :keywords, required: true
+      == f.input :image, as: :file
+      - if event.image.present?
+        == link_to event.image.url, target: '_blank' do
+          == image_tag event.image.small, class: 'img-thumbnail'
 
   br/
   .row

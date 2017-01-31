@@ -33,12 +33,33 @@
               td.col-md-8= event.title
             tr
               td.col-md-4
-                = t('simple_form.labels.event.desc')
+                = t('simple_form.labels.event.desc_abbr')
               td.col-md-8= event.desc
             tr
               td.col-md-4
                 = t('simple_form.labels.event.created_at')
               td.col-md-8= l event.created_at, format: :ymds
+
+  .col-md-12
+    .panel.colourable
+      /! Default panel contents
+      .panel-heading
+        span.panel-title= t('simple_form.labels.event.seo_info')
+      .panel-body
+        /! Table
+        table.table
+          tbody
+            tr
+              td.col-md-4
+                = t('simple_form.labels.event.keywords_abbr')
+              td.col-md-8
+                = event.keywords
+            tr
+              td.col-md-4
+                = t('simple_form.labels.event.title')
+              td.col-md-8
+                == link_to event.image.url, target: '_blank' do
+                  == image_tag event.image.small, class: 'img-thumbnail'
 
   .col-md-12
     .panel.colourable
