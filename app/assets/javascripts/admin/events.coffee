@@ -8,7 +8,7 @@ $ ->
     Sortable.create sortable_products,
       animation: 150
       onEnd: (evt) ->
-        event_id = $('#show').data('id')
+        event_id = $('#events_show').data('id')
 
         data = {}
         $('#sortable_products tr').each (index, v) ->
@@ -21,7 +21,7 @@ $ ->
           data: {product_index_attributes: data}
           success: (data) ->
             if data.status == 'success'
-              notyMessage data.status
+              notyMessage '更新成功'
             else
-                notyError data.status
+              notyError '更新失敗'
 

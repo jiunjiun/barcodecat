@@ -1,6 +1,6 @@
 == render partial: 'admin/common/breadcrumb', locals: {breadcrumbs: [{title: t('event'), link: admin_events_path}, {title: event.title}], headers: {title: event.title, right_title: {title: t('helpers.edit'), link: edit_admin_event_path(event)}}}
 
-.row#show data-id=event.id
+.row#events_show data-id=event.id
   .col-md-12
     .panel.colourable
       /! Default panel contents
@@ -71,7 +71,7 @@
 
       .panel-body
         /! Table
-        table.table
+        table#events_products.table
           thead
             tr
               th.col-md-2

@@ -18,3 +18,9 @@
     overflow-y: auto;
   }
 }
+
+#events_show {
+  #events_products tbody tr {
+    cursor: move;
+  }
+}
