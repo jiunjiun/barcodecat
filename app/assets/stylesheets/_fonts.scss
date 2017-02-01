@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'cwTeXHei';
+  font-style: normal;
+  font-weight: 500;
+  src: url('//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot');
+  src: url('//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix') format('embedded-opentype'),
+       url('//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2') format('woff2'),
+       url('//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff') format('woff'),
+       url('//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf') format('truetype');
+}
+
+// home
+.hawa-banner .content .titles h4,
+.hawa-text-block .title,
+.portfolio-item .layer .item-title {
+  font-family: 'cwTeXHei', sans-serif;
+}
+
+// paralax
+.hawa-page-header .title-blog-banner .title,
+.hawa-banner .content .titles h2,
+.hawa-banner .content .titles p {
+  font-family: 'cwTeXHei', sans-serif;
+}
