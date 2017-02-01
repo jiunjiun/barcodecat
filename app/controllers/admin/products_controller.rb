@@ -23,7 +23,7 @@ class Admin::ProductsController < AdminController
 
   def update
     if product.update product_params
-      redirect_to admin_event_path(params[:event_id], product), notice: t('helpers.successfully_updated')
+      redirect_to admin_event_path(params[:event_id]), notice: t('helpers.successfully_updated')
     else
       render :edit
     end
