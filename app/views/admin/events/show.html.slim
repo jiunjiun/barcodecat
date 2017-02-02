@@ -89,4 +89,4 @@
                     = link_to admin_event_product_path(product), method: :delete, data: {confirm: t('helpers.are_you_sure')}, class: 'btn btn-xs btn-danger btn-3d' do
                       = t('helpers.delete')
                 td.text-center= product.name
-                td.text-center= product.url
+                td.text-center= product.url.truncate(80)
