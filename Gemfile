@@ -86,6 +86,9 @@ gem "rails-i18n"
 # Use for google analytics
 gem 'google-analytics-rails'
 
+# mixpanel
+gem 'mixpanel-ruby'
+
 # form
 gem 'simple_form'
 
