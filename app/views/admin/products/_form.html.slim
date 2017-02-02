@@ -1,4 +1,4 @@
-== simple_form_for([:admin, event, product]) do |f|
+== simple_form_for([:admin, event, product], html: { autocomplete: 'off' }) do |f|
   .panel.colourable
     .panel-heading
       span.panel-title= t('simple_form.labels.product.info')
