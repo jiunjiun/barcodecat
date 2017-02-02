@@ -19,3 +19,9 @@
 .bg_one_page_text_ticker {
   background-image: image-url('banner.gz.jpg');
 }
+
+@media only screen and (max-width: 480px) {
+  .hawa-logo {
+    width: 115px;
+  }
+}
