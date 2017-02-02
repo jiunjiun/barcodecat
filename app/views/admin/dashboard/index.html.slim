@@ -1,2 +1,10 @@
-h1 Admin::Dashboard#index
-p Find me in app/views/admin/dashboard/index.html.slim
+== render partial: 'admin/common/breadcrumb', locals: {breadcrumbs: [{title: t('backend')}], headers: {title: t('backend'), right_title: {}}}
+
+.row#dashboard_index
+  .col-md-6
+    .panel.colourable
+      .panel-body
+        h2.has-divider.text-highlight= t('event')
+        ul.list-inline
+          li
+            == link_to t('event'), admin_events_path
