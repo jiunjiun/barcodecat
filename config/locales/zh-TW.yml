@@ -84,6 +84,7 @@ zh-TW:
         seo_info:       'SEO設定'
         keywords:       '關鍵字 (keywords) - 輸入格式用逗號(,)隔開'
         image:          '活動主要圖片 (og:image) - 建議圖片 1200 x 630'
+        image_abbr:     '活動主要圖片'
         keywords_abbr:  '關鍵字 (keywords)'
 
       product:
