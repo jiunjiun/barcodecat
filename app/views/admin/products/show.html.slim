@@ -30,3 +30,8 @@
               td.col-md-10
                 == link_to product.banner.url, target: '_blank' do
                   == image_tag product.banner.small, class: 'img-thumbnail'
+            tr
+              td.col-md-2
+                = t('simple_form.labels.product.banner_style')
+              td.col-md-10
+                = KeyValues::Product::BannerStyle.find(product.banner_style).name

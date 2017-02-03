@@ -88,11 +88,12 @@ zh-TW:
         keywords_abbr:  '關鍵字 (keywords)'
 
       product:
-        info:       '商品資訊'
-        name:       '商品名稱'
-        desc:       '描述'
-        url:        '商品連結'
-        banner:     '商品圖片'
+        info:           '商品資訊'
+        name:           '商品名稱'
+        desc:           '描述'
+        url:            '商品連結'
+        banner:         '商品圖片'
+        banner_style:   '商品圖片色系'
     placeholders:
       event:
         keywords: '最強,彩妝,前十名'

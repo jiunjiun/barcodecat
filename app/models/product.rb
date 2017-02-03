@@ -7,6 +7,11 @@ class Product < ApplicationRecord
 
   before_create :update_index
 
+  module BannerStyle
+    WHITE = 1
+    DARK  = 2
+  end
+
   private
   def update_index
     self.index = self.event.products.size

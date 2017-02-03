@@ -34,4 +34,13 @@ module KeyValues
       ]
     end
   end
+
+  module Product
+    class BannerStyle < KeyValues::Base
+      self.data = [
+        {id: 1, code: :white, name: '亮色系'},
+        {id: 2, code: :dark,  name: '暗色系'}
+      ]
+    end
+  end
 end

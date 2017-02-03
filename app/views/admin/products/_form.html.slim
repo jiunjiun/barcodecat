@@ -7,6 +7,9 @@
       == f.input :desc, required: false
       == f.input :url, required: true, as: :url
       == f.input :banner, as: :file
+      == f.input :banner_style do
+        br/
+        == f.select :banner_style, KeyValues::Product::BannerStyle.id_options
       - if product.banner.present?
         == link_to product.banner.url, target: '_blank' do
           == image_tag product.banner.small, class: 'img-thumbnail'
