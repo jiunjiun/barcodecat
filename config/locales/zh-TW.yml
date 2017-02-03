@@ -81,6 +81,7 @@ zh-TW:
         link_name:      '網址名稱'
         enable:         '公開'
         created_at:     '建立時間'
+        updated_at:     '最後修改'
         seo_info:       'SEO設定'
         keywords:       '關鍵字 (keywords) - 輸入格式用逗號(,)隔開'
         image:          '活動主要圖片 (og:image) - 建議圖片 1200 x 630'
