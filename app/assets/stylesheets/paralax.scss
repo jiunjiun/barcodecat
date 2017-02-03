@@ -22,17 +22,26 @@
   background-color: #FFFFFB;
 }
 
+@media (max-width: 767px) {
+  .hawa-logo {
+    width: 125px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .hawa-logo {
     width: 125px;
   }
 }
 
+.hawa-page-header.empty-light .title {
+  color: #37474F;
+}
+
 .event_product.dark .hawa-banner .content {
   .titles {
     h2 {
-      color: #546E7A;
-      text-shadow: rgba(12, 12, 12, 0.31) 4px 4px 4px;
+      color: #37474F;
+      text-shadow: 3px 3px 1px rgba(0,0,0,0.2);
       letter-spacing: 10px;
       font-size: 72px;
     }
@@ -43,7 +52,6 @@
     }
   }
 }
-
 
 @media only screen and (max-width: 480px) {
   .event_product.dark .hawa-banner .content {
