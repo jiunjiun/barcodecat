@@ -9,7 +9,7 @@
               p= event.desc
 
 - event.products.each do |product|
-  .row
+  .row.event_product
     .col-sm-12
       .hawa-banner.text-center.buttons-modern
         == image_tag product.banner, class: 'img-fixed', alt: product.name
