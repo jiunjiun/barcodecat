@@ -11,16 +11,22 @@
         table.table
           tbody
             tr
-              td.col-md-4
+              td.col-md-2
                 = t('simple_form.labels.product.name')
-              td.col-md-8= product.name
+              td.col-md-10= product.name
             tr
-              td.col-md-4
+              td.col-md-2
+                = t('simple_form.labels.product.desc')
+              td.col-md-10= product.desc
+            tr
+              td.col-md-2
                 = t('simple_form.labels.product.url')
-              td.col-md-8= product.url
+              td.col-md-10
+                == link_to product.url, target: '_blank' do
+                  = product.url.truncate(80)
             tr
-              td.col-md-4
+              td.col-md-2
                 = t('simple_form.labels.product.banner')
-              td.col-md-8
+              td.col-md-10
                 == link_to product.banner.url, target: '_blank' do
                   == image_tag product.banner.small, class: 'img-thumbnail'
