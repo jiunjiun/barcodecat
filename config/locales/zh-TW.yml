@@ -94,7 +94,7 @@ zh-TW:
         desc:           '描述'
         url:            '商品連結'
         banner:         '商品圖片'
-        banner_style:   '商品圖片色系'
+        banner_style:   '商品圖片顯示色系'
     placeholders:
       event:
         keywords: '最強,彩妝,前十名'
