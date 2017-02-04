@@ -803,11 +803,11 @@ Main Script
 					'background-position' : 'center',
 					'height' : $(this).height()
 				});
-				// if (_isIOS) {
-				// 	$(this).closest('.hawa-banner').css({
-				// 		'background-attachment' : 'initial'
-				// 	});
-				// }
+				if (_isIOS) {
+					$(this).closest('.hawa-banner').css({
+						'background-attachment' : 'initial'
+					});
+				}
 				$(this).hide();
 			});
 		}
