@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   private
   def prepare_meta_tags opts={}
-    title       = I18n.t('title')
+    title       = opts[:title] || I18n.t('title')
     site        = opts[:site] || ''
     description = opts[:description]
     keywords    = opts[:keywords]
