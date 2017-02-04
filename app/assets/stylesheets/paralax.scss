@@ -67,3 +67,16 @@
     }
   }
 }
+
+
+@media (max-width: 1025px) {
+  .hawa-banner .content .buttons-buttom {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .hawa-banner .content .buttons-buttom a {
+    display: block;
+  }
+}
