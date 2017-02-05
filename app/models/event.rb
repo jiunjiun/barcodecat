@@ -1,14 +1,8 @@
 class Event < ApplicationRecord
   has_many :products, -> { order :index }
+  has_one  :meta, dependent: :destroy
 
-  validates_presence_of :title, :link_name, :keywords
+  validates_presence_of :title, :link_name
 
-  mount_uploader :image, ProductBannerUploader
-
-  before_save :fiter_keywords
-
-  private
-  def fiter_keywords
-    self.keywords = self.keywords.delete(' ')
-  end
+  accepts_nested_attributes_for :meta
 end

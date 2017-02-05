@@ -10,6 +10,7 @@ class Admin::EventsController < AdminController
   end
 
   def new
+    event.build_meta
   end
 
   def create
@@ -38,6 +39,8 @@ class Admin::EventsController < AdminController
 
   private
   def event_params
-    params.require(:event).permit(:title, :desc, :link_name, :keywords, :image, :enable)
+    params.require(:event)
+          .permit(:title, :desc, :link_name, :enable,
+                    meta_attributes: [:event_id, :desc, :keywords, :image] )
   end
 end

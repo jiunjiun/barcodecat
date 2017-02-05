@@ -76,17 +76,19 @@ zh-TW:
       event:
         info:           '活動資訊'
         title:          '標題'
-        desc:           '描述 (description) - 描述的字數以120字左右為佳'
+        desc:           '描述'
         desc_abbr:      '描述'
         link_name:      '網址名稱'
         enable:         '公開'
         created_at:     '建立時間'
         updated_at:     '最後修改'
         seo_info:       'SEO設定'
-        keywords:       '關鍵字 (keywords) - 輸入格式用逗號(,)隔開'
-        image:          '活動主要圖片 (og:image) - 建議圖片 1200 x 630'
-        image_abbr:     '活動主要圖片'
-        keywords_abbr:  '關鍵字 (keywords)'
+        meta:
+          desc:           '描述 (description) - 描述的字數以120字左右為佳'
+          keywords:       '關鍵字 (keywords) - 輸入格式用逗號(,)隔開'
+          image:          '活動主要圖片 (og:image) - 建議圖片 1200 x 630'
+          image_abbr:     '活動主要圖片'
+          keywords_abbr:  '關鍵字 (keywords)'
 
       product:
         info:           '商品資訊'

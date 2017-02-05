@@ -20,29 +20,33 @@
     .panel-heading
       span.panel-title= t('simple_form.labels.event.seo_info')
     .panel-body
-      == f.input :keywords, required: true
-      == f.input :image, as: :file
-      - if event.image.present?
-        == link_to event.image.url, target: '_blank' do
-          == image_tag event.image.small, class: 'img-thumbnail'
+      = f.simple_fields_for :meta do |meta|
+        == meta.input :event_id, as: :hidden
+        == meta.input :desc, required: false
+        == meta.input :keywords, required: false
+        == meta.input :image, as: :file, required: false
+        - if event.meta.image.present?
+          == link_to event.meta.image.url, target: '_blank' do
+            == image_tag event.meta.image.small, class: 'img-thumbnail'
 
-  .panel.colourable
-    .panel-heading
-      span.panel-title= t('simple_form.labels.product.info')
-    .panel-body
-      table#events_products.table
-        thead
-          tr
-            th.col-md-2.text-center
-            th.col-md-10= t('simple_form.labels.product.name')
-        tbody
-          - event.products.each do |product|
+  - if action_name == 'edit'
+    .panel.colourable
+      .panel-heading
+        span.panel-title= t('simple_form.labels.product.info')
+      .panel-body
+        table#events_products.table
+          thead
             tr
-              td.text-center
-                .btn-group
-                  = link_to admin_event_product_path(event, product), class: 'btn btn-xs btn-primary btn-3d' do
-                    = t('helpers.show')
-              td= product.name
+              th.col-md-2.text-center
+              th.col-md-10= t('simple_form.labels.product.name')
+          tbody
+            - event.products.each do |product|
+              tr
+                td.text-center
+                  .btn-group
+                    = link_to admin_event_product_path(event, product), class: 'btn btn-xs btn-primary btn-3d' do
+                      = t('helpers.show')
+                td= product.name
 
   br/
   .row

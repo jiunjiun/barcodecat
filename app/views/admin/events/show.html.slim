@@ -55,15 +55,20 @@
           tbody
             tr
               td.col-md-4
-                = t('simple_form.labels.event.keywords_abbr')
+                = t('simple_form.labels.event.desc_abbr')
               td.col-md-8
-                = event.keywords
+                = event.meta.desc
             tr
               td.col-md-4
-                = t('simple_form.labels.event.image_abbr')
+                = t('simple_form.labels.event.meta.keywords_abbr')
               td.col-md-8
-                == link_to event.image.url, target: '_blank' do
-                  == image_tag event.image.small, class: 'img-thumbnail'
+                = event.meta.keywords
+            tr
+              td.col-md-4
+                = t('simple_form.labels.event.meta.image_abbr')
+              td.col-md-8
+                == link_to event.meta.image.url, target: '_blank' do
+                  == image_tag event.meta.image.small, class: 'img-thumbnail'
 
   .col-md-12
     .panel.colourable

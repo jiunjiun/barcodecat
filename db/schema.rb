@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170203043849) do
+ActiveRecord::Schema.define(version: 20170205152956) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -34,11 +34,19 @@ ActiveRecord::Schema.define(version: 20170203043849) do
     t.string   "title"
     t.text     "desc",       limit: 65535
     t.string   "link_name"
-    t.text     "keywords",   limit: 65535
-    t.string   "image"
     t.boolean  "enable",                   default: false
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
+  end
+
+  create_table "meta", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "event_id"
+    t.text     "desc",       limit: 65535
+    t.text     "keywords",   limit: 65535
+    t.string   "image"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["event_id"], name: "index_meta_on_event_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -54,5 +62,6 @@ ActiveRecord::Schema.define(version: 20170203043849) do
     t.index ["event_id"], name: "index_products_on_event_id", using: :btree
   end
 
+  add_foreign_key "meta", "events"
   add_foreign_key "products", "events"
 end
