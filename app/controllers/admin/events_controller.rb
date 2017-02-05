@@ -41,6 +41,6 @@ class Admin::EventsController < AdminController
   def event_params
     params.require(:event)
           .permit(:title, :desc, :link_name, :enable,
-                    meta_attributes: [:event_id, :desc, :keywords, :image] )
+                    meta_attributes: [:id, :event_id, :desc, :keywords, :image] )
   end
 end
