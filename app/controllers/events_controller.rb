@@ -27,9 +27,9 @@ class EventsController < ApplicationController
   def update_meta_tags
     meta_tags_option = {
       site: event.title,
-      description: event.desc,
-      keywords: event.keywords,
-      image: event.image,
+      description: event.meta.desc,
+      keywords: event.meta.keywords,
+      image: event.meta.image,
     }
 
     prepare_meta_tags meta_tags_option
