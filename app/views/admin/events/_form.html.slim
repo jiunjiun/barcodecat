@@ -26,6 +26,24 @@
         == link_to event.image.url, target: '_blank' do
           == image_tag event.image.small, class: 'img-thumbnail'
 
+  .panel.colourable
+    .panel-heading
+      span.panel-title= t('simple_form.labels.product.info')
+    .panel-body
+      table#events_products.table
+        thead
+          tr
+            th.col-md-2.text-center
+            th.col-md-10= t('simple_form.labels.product.name')
+        tbody
+          - event.products.each do |product|
+            tr
+              td.text-center
+                .btn-group
+                  = link_to admin_event_product_path(event, product), class: 'btn btn-xs btn-primary btn-3d' do
+                    = t('helpers.show')
+              td= product.name
+
   br/
   .row
     .col-md-12
