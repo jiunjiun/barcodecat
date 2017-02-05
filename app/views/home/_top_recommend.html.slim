@@ -24,7 +24,7 @@
         - events.each do |event|
           .portfolio-item.pi.item-337.col-sm-4.home2-1
             = link_to event_path(event.link_name), class: 'animsition-link', 'data-effect': 'zoomIn' do
-              == image_tag event.image.small, alt: event.title, class: 'bg-responsive-img item-img wp-post-image'
+              == image_tag event.meta.image.small, alt: event.title, class: 'bg-responsive-img item-img wp-post-image'
               .layer
                 span.icon-item.icon-attachment
                 h4.item-title= event.title
