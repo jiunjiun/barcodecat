@@ -10,6 +10,8 @@
   <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 
   <%= stylesheet_link_tag  'paralax', media: 'all' %>
+
+  <%= render 'common_js/mixpanel' %>
 </head>
 <body class="animsition">
   <%= render 'common/loading' %>

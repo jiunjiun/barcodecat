@@ -19,3 +19,5 @@
 #= require hawa/wNumb
 #= require hawa/nouislider.min
 #= require hawa/all
+
+#= require mixpanel_track
