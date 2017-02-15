@@ -48,6 +48,7 @@ zh-TW:
     buy              : '購買商品'
     preview          : '預覽'
     production_view  : '正式'
+    link             : '連結'
 
     successfully_created : '新增成功' # Your profile was successfully created.
     successfully_updated : '更新成功' # Your profile was successfully updated.
@@ -97,8 +98,11 @@ zh-TW:
         url:            '商品連結'
         banner:         '商品圖片'
         banner_style:   '商品圖片顯示色系'
+        redirects:
+          yahoo:
+            name: 'Yahoo 大聯盟: '
+            url: 'https://tw.partner.buy.yahoo.com/'
+
     placeholders:
       event:
         keywords: '最強,彩妝,前十名'
-
-

@@ -6,6 +6,10 @@
       == f.input :name, required: true
       == f.input :desc, required: false
       == f.input :url, required: true, as: :url
+      ul
+        li
+          = t('simple_form.labels.product.redirects.yahoo.name')
+          == link_to t('helpers.link'), t('simple_form.labels.product.redirects.yahoo.url'), target: '_blank'
       == f.input :banner, as: :file
       == f.input :banner_style do
         br/
