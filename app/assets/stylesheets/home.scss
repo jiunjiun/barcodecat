@@ -2,26 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//= require hawa/bootstrap.min
-//= require hawa/bootstrap-select.min
-//= require hawa/animsition.min
-//= require hawa/et-line-font
-//= require hawa/fontawesome-iconpicker.min
-//= require hawa/magnific-popup
-//= require hawa/menu-responsive
-//= require hawa/styles
-//= require hawa/yura
-//= require hawa/prettyPhoto
+//= require Polo/bootstrap/bootstrap.min
+//= require Polo/animateit/animate.min
+//= require Polo/owlcarousel/owl.carousel
+//= require Polo/magnific-popup/magnific-popup
+//= require Polo/theme-base
+//= require Polo/theme-elements
+//= require Polo/responsive
+//= require Polo/color-variations/green-light
+//= require Polo/custom
 
 @import "font-awesome";
 @import "fonts";
-
-.bg_one_page_text_ticker {
-  background-image: image-url('banner.gz.jpg');
-}
-
-@media only screen and (max-width: 480px) {
-  .hawa-logo {
-    width: 115px;
-  }
-}
