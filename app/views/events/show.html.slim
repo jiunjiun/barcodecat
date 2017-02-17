@@ -8,14 +8,14 @@
         - if i.even?
           .col-md-6 style="height:609px;background:url(#{product.banner.url}) 50% 50% / cover no-repeat;"
           .col-md-6
-            .heading.heading.text-left
+            .heading.text-left
               h2= product.name
               span.lead= product.desc
             == link_to product.url, class: 'button border rounded goto_buy', target: '_blank' do
               span= t('helpers.buy')
         - else
-          .col-md-6
-            .heading.heading.text-left
+          .col-md-6.text-right
+            .heading
               h2= product.name
               span.lead= product.desc
             == link_to product.url, class: 'button border rounded goto_buy', target: '_blank' do

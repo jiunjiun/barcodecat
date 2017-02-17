@@ -14,3 +14,8 @@
 
 @import "font-awesome";
 @import "fonts";
+
+
+.text-right .heading:after {
+  float: right;
+}
