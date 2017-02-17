@@ -11,9 +11,6 @@
           = t('simple_form.labels.product.redirects.yahoo.name')
           == link_to t('helpers.link'), t('simple_form.labels.product.redirects.yahoo.url'), target: '_blank'
       == f.input :banner, as: :file
-      == f.input :banner_style do
-        br/
-        == f.select :banner_style, KeyValues::Product::BannerStyle.id_options
       - if product.banner.present?
         == link_to product.banner.url, target: '_blank' do
           == image_tag product.banner.small, class: 'img-thumbnail'
