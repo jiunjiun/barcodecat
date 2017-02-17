@@ -9,7 +9,7 @@ header#header.header-transparent
       /! END: LOGO
       /! MOBILE MENU
       .nav-main-menu-responsive
-        button.lines-button.x type="button" 
+        button.lines-button.x type="button"
           span.lines
       /! END: MOBILE MENU
       /! NAVIGATION MENU
@@ -20,6 +20,6 @@ header#header.header-transparent
               == link_to root_path do
                 i.fa.fa-home
             li
-              a href="#top_recommend"= t('top_recommend')
+              == link_to t('top_recommend'), root_path(anchor: 'top_recommend')
       /! END: NAVIGATION
 /! END: Header

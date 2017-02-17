@@ -1,82 +1,16 @@
-//= require hawa/bootstrap.min
-//= require hawa/bootstrap-select.min
-//= require hawa/animsition.min
-//= require hawa/et-line-font
-//= require hawa/fontawesome-iconpicker.min
-//= require hawa/magnific-popup
-//= require hawa/menu-responsive
-//= require hawa/prettyPhoto
-//= require hawa/nouislider.min
-//= require hawa/styles
-//= require hawa/yura
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//= require Polo/bootstrap/bootstrap.min
+//= require Polo/animateit/animate.min
+//= require Polo/owlcarousel/owl.carousel
+//= require Polo/magnific-popup/magnific-popup
+//= require Polo/theme-base
+//= require Polo/theme-elements
+//= require Polo/responsive
+//= require Polo/color-variations/green-light
+//= require Polo/custom
 
 @import "font-awesome";
 @import "fonts";
-
-#loading-center-absolute {
-  left: 47%;
-  top: 45%;
-}
-
-.bg-gofun {
-  background-color: #FFFFFB;
-}
-
-@media (max-width: 767px) {
-  .hawa-logo {
-    width: 125px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .hawa-logo {
-    width: 125px;
-  }
-}
-
-.hawa-page-header.empty-light .title {
-  color: #37474F;
-}
-
-.event_product.dark .hawa-banner .content {
-  .titles {
-    h2 {
-      color: #37474F;
-      text-shadow: 3px 3px 1px rgba(0,0,0,0.2);
-      letter-spacing: 10px;
-      font-size: 72px;
-    }
-
-    p {
-      color: #546E7A;
-      margin: 10px 10%;
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .event_product.dark .hawa-banner .content {
-    .titles {
-      h2 {
-        letter-spacing: 0;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-
-@media (max-width: 1025px) {
-  .hawa-banner .content .buttons-buttom {
-    display: block;
-  }
-}
-
-@media (max-width: 480px) {
-  .hawa-banner .content .buttons-buttom a {
-    display: block;
-  }
-}

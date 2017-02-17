@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   layout 'paralax'
 
+  expose :events, -> { Event.last(10) }
   expose :event, -> { find_event }
 
   before_action :verify_event
