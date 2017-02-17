@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   layout 'paralax'
 
-  expose :events, -> { Event.where(enable: true).last(10) }
+  expose :events, -> { Event.last10 }
   expose :event, -> { find_event }
 
   before_action :verify_event
