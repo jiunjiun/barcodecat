@@ -1,0 +1,28 @@
+/! BLOG
+section#top_recommend.parallax.p-t-150.p-b-150
+  .container
+    div data-animation="fadeInUp" data-animation-delay="100"
+      .heading.heading.heading-center
+        h1.text-medium 最強推薦
+        span.lead 我們為了你整理了最強的推薦清單，絕對不可以錯過的重要清單
+    #blog
+      .container
+        .carousel data-lightbox="gallery"
+          - events.each do |event|
+            .portfolio-item
+              .portfolio-image.effect.social-links
+                == image_tag event.meta.image.small, alt: event.title
+                .image-box-content
+                  p
+                    == link_to event_path(event.link_name), target: '_blank' do
+                      i.fa.fa-link
+              .portfolio-description
+                h4.title= event.title
+                / p
+                /   i.fa.fa-tag
+                /   | Design / Artwork
+              .portfolio-date
+                p.small
+                  i.fa.fa-calendar-o
+                  = l event.updated_at, format: :mmddyy
+/! BLOG

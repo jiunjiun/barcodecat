@@ -106,3 +106,14 @@ zh-TW:
     placeholders:
       event:
         keywords: '最強,彩妝,前十名'
+
+  date:
+    formats:
+      yymmdd: '%Y年%m月%d日'
+  time:
+    formats:
+      yymmdd: '%Y年%m月%d日'
+      mmddyy: '%m月%d日%Y'
+      yymmdd_s: '%Y/%m/%d'
+      ymds: '%Y-%m-%d %T'
+      long: '%Y年%m月%d日 %T'

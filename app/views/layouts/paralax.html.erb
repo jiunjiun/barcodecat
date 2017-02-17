@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
   <%= render partial: 'common/favicon' %>
 
   <%= display_meta_tags %>
   <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 
+  <!-- LOAD GOOGLE FONTS -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
+
   <%= stylesheet_link_tag  'paralax', media: 'all' %>
-
-  <%= render 'common_js/mixpanel' %>
 </head>
-<body class="animsition">
-  <%= render 'common/loading' %>
-  <%= render 'paralax_common/header' %>
-
-  <%= yield %>
-
+<body class="wide" data-animation-icon-path="images/">
+  <!-- WRAPPER -->
+  <div class="wrapper">
+    <%= render 'paralax_common/header' %>
+    <%= yield %>
+  </div>
   <%= render 'common/footer' %>
 
   <%= javascript_include_tag 'paralax' %>

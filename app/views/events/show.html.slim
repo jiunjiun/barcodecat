@@ -1,22 +1,26 @@
-.bg-gofun.button-elem
-  .container-fluid.no-padd
-    .row
-      .col-md-12
-        .hawa-page-header.empty-image.empty-light
-          .title-blog-banner.static
-            .container
-              h1.title= event.title
-              p= event.desc
+== render 'slider'
 
-- event.products.each do |product|
-  .row.event_product class="#{ product.banner_style == Product::BannerStyle::DARK ? 'dark' : ''}"
-    .col-sm-12
-      .hawa-banner.text-center.buttons-modern
-        == image_tag product.banner, class: 'img-fixed', alt: product.name
-        .content.col-md-12
-          .titles
-            h2.title= product.name
-            br/
-            p= product.desc
-          .buttons-buttom
-            = link_to t('helpers.buy'), product.url, class: 'black white goto_buy', target: '_blank'
+- event.products.each_with_index do |product, i|
+  /! IMAGE BLOCK
+  section#image-block.image-block.no-padding
+    .container-fluid
+      .row
+        - if i.even?
+          .col-md-6 style="height:609px;background:url(#{product.banner.url}) 50% 50% / cover no-repeat;"
+          .col-md-6
+            .heading.heading.text-left
+              h2= product.name
+              span.lead= product.desc
+            == link_to product.url, class: 'button border rounded goto_buy', target: '_blank' do
+              span= t('helpers.buy')
+        - else
+          .col-md-6
+            .heading.heading.text-left
+              h2= product.name
+              span.lead= product.desc
+            == link_to product.url, class: 'button border rounded goto_buy', target: '_blank' do
+              span= t('helpers.buy')
+          .col-md-6 style="height:609px;background:url(#{product.banner.url}) 50% 50% / cover no-repeat;"
+  /! END: IMAGE BLOCK
+
+== render 'more'

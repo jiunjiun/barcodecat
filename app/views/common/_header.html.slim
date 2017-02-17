@@ -1,16 +1,25 @@
-header.hawa-main-header.sticky-header.animsition.hawa-show-menu.dark
-  .container
-    .row
-      .col-md-12.top-header
-        .hawa-logo
-          == link_to t('title'), root_path
-          h1.hide= t('title')
-        .hawa-navigation.width-nav
-          /! SITE MENU
-          nav
-            ul.main-menu.menu-scroll.white-submenu
-              li.menu-item
-                a href='#top_recommend'= t('top_recommend')
-          .hawa-nav-menu-icon
-            span
-          /! END SITE MENU
+/! Header
+header#header.header-transparent
+  #header-wrap
+    .container
+      /! LOGO
+      #logo
+        == link_to root_path, class: 'logo' do
+          == image_tag 'logos/logo@96.png'
+      /! END: LOGO
+      /! MOBILE MENU
+      .nav-main-menu-responsive
+        button.lines-button.x type="button"
+          span.lines
+      /! END: MOBILE MENU
+      /! NAVIGATION MENU
+      .navigation-wrap
+        nav#mainMenu.style-1.main-menu.mega-menu
+          ul.main-menu.nav.nav-pills
+            li
+              == link_to root_path do
+                i.fa.fa-home
+            li
+              == link_to t('top_recommend'), root_path(anchor: 'top_recommend')
+      /! END: NAVIGATION
+/! END: Header
