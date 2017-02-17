@@ -1,16 +1,16 @@
 class EventsController < ApplicationController
   layout 'paralax'
 
-  expose :events, -> { Event.last(10) }
+  expose :events, -> { Event.where(enable: true).last(10) }
   expose :event, -> { find_event }
 
   before_action :verify_event
   before_action :update_meta_tags
 
-  def show
-  end
+  def show; end
 
   private
+
   def find_event
     link_name = params[:link_name]
     _event = Event.where(link_name: link_name)
@@ -20,7 +20,7 @@ class EventsController < ApplicationController
   end
 
   def verify_event
-    redirect_to event_path(Event.where(enable: true).last.link_name) and return if event.blank?
+    redirect_to(event_path(Event.where(enable: true).last.link_name)) && return if event.blank?
   rescue
     redirect_to root_path
   end
@@ -30,7 +30,7 @@ class EventsController < ApplicationController
       site: event.title,
       description: event.meta.desc,
       keywords: event.meta.keywords,
-      image: event.meta.image,
+      image: event.meta.image
     }
 
     prepare_meta_tags meta_tags_option
