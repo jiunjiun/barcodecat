@@ -4,8 +4,8 @@
   /! IMAGE BLOCK
   section#image-block.image-block.no-padding
     .container-fluid
-      .row
-        - if i.even?
+      - if i.even?
+        .row
           .col-md-6 style="height:609px;background:url(#{product.banner.url}) 50% 50% / cover no-repeat;"
           .col-md-6
             .heading.text-left
@@ -13,7 +13,8 @@
               span.lead= product.desc
             == link_to product.url, class: 'button border rounded goto_buy', target: '_blank' do
               span= t('helpers.buy')
-        - else
+      - else
+        .row.right_side
           .col-md-6.text-right
             .heading
               h2= product.name
