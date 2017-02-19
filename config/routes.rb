@@ -17,6 +17,7 @@ Rails.application.routes.draw do
         end
       end
     end
+    resources :infos, only: [:index]
   end
 
   root 'home#index'

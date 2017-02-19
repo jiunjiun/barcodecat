@@ -1,0 +1,19 @@
+== render partial: 'admin/common/breadcrumb', locals: {breadcrumbs: [{title: t('info')}], headers: {title: t('info'), right_title: {}}}
+
+.row
+  .col-md-6
+    .panel
+      .panel-heading
+        span.panel-title 共同資源
+      .panel-body
+        == link_to 'Google Drive', 'https://drive.google.com/open?id=0B09aI6nCDaPfT3pERWFSOHYzc1k', target: '_blank'
+        span &nbsp;-&nbsp;相關的帳密、Logo
+  .col-md-6
+    .panel
+      .panel-heading
+        span.panel-title 分析資料
+      ul.list-group
+        li.list-group-item
+          == link_to 'Google Analytics', 'https://analytics.google.com/analytics/web/?hl=zh-TW&pli=1#report/defaultid/a91051038w134986941p139116461/', target: '_blank'
+        li.list-group-item
+          == link_to 'Mixpanel', 'https://mixpanel.com/report/1159610/segmentation/', target: '_blank'
