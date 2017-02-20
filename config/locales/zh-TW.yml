@@ -56,6 +56,7 @@ zh-TW:
     successfully_destroy : '刪除成功' # Your profile was successfully destroy.
     create_fail          : '新增失敗'
     update_fail          : '更新失敗'
+    destroy_fail         : '刪除失敗，活動公開中，請設定為私人再做刪除!'
 
     submit:
       create: "新增"
