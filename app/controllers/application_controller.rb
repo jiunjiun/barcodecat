@@ -33,9 +33,7 @@ class ApplicationController < ActionController::Base
         title: site.present? ? "#{site} | #{title}" : title,
         description: description,
         url: request.original_url,
-        image: {
-          src: opts[:image]
-        }
+        image: opts[:image]
       }
     }
 
