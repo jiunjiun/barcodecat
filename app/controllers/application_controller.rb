@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :prepare_meta_tags
 
   private
-  def prepare_meta_tags opts={}
+
+  def prepare_meta_tags(opts = {})
     title       = opts[:title] || I18n.t('title')
     site        = opts[:site] || ''
     description = opts[:description]
@@ -25,6 +26,16 @@ class ApplicationController < ActionController::Base
         site_name: title,
         type: opts[:type] || 'website',
         image: opts[:image]
+      },
+
+      twitter: {
+        card: 'summary',
+        title: site.present? ? "#{site} | #{title}" : title,
+        description: description,
+        url: request.original_url,
+        image: {
+          src: opts[:image]
+        }
       }
     }
 
