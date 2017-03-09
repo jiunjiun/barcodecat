@@ -1,0 +1,372 @@
+//= require product_img.amp
+
+/* ====================== lines button ==================================================*/
+
+.lines-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    transition: 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 16px;
+    background: transparent;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+.lines-button > * {
+    display: block;
+}
+.lines-button:hover,
+.lines-button:focus {
+    outline: none;
+}
+.lines-button::-moz-focus-inner {
+    border: 0;
+}
+.lines {
+    display: inline-block;
+    height: 2px;
+    width: 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+    position: relative;
+}
+.lines::before,
+.lines::after {
+    display: inline-block;
+    height: 2px;
+    width: 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+    content: '';
+    position: absolute;
+    left: 0;
+    -webkit-transform-origin: 2.85714px center;
+    transform-origin: 2.85714px center;
+    width: 100%;
+}
+.lines::before {
+    top: 5px;
+}
+.lines::after {
+    top: -5px;
+}
+
+.lines,
+.lines:before,
+.lines:after {
+    background-color: #111;
+}
+
+.tcon-transform .lines {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+}
+.x {
+    width: auto;
+}
+.x.tcon-transform .lines {
+    background: transparent;
+}
+.x.tcon-transform .lines::before,
+.x.tcon-transform .lines::after {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    top: 0;
+    width: 20px;
+}
+.x.tcon-transform .lines::before {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+.x.tcon-transform .lines::after {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/* ====================== End lines button ==================================================*/
+
+// general
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+// end general
+
+html * {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.header {
+  padding: 15px 20px;
+  border-bottom: 1px #ddd solid;
+
+  .logo {
+    float: left;
+    // margin: 10px;
+  }
+  .nav-main-menu-responsive {
+    width: 30px;
+    height: 30px;
+
+    // margin: 10px;
+  }
+}
+
+.inspiro-slider {
+  height: 360px;
+  width: 100%;
+  display: table;
+
+  .slide-captions {
+    display: table-cell;
+    vertical-align: middle;
+
+    .main {
+      width: 80%;
+      margin: 0 auto;
+
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 2px;
+      // margin-bottom: 14px;
+    }
+  }
+}
+
+.products {
+  .desc {
+    padding: 60px;
+
+    .heading {
+      margin-bottom: 80px;
+
+      & > span {
+        display: block;
+        color: #888;
+      }
+
+      & h2 + span, & h2 + span.lead {
+        font-size: 20px;
+      }
+
+      &:after {
+        border-top: 3px solid #303030;
+        display: block;
+        margin-top: 10px;
+        width: 30px;
+        content: "";
+      }
+
+      h2 {
+        font-size: 40px;
+        line-height: 42px;
+        color: #303030;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-family: 'Raleway', sans-serif;
+      }
+    }
+
+    &.text-right .heading:after {
+      float: right;
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    .button {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 100%;
+      margin: 10px 0;
+      outline: 0 none;
+      padding: 18px 36px;
+      position: relative;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border: 1px solid #ccc;
+
+      &.border {
+        color: #333;
+        border: 2px solid #333;
+      }
+
+      &.rounded {
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.more {
+  width: 100%;
+  padding-bottom: 80px;
+
+  .heading {
+    margin-bottom: 80px;
+
+    &:after {
+      margin: 30px auto 0;
+      border-top: 3px solid #303030;
+      display: block;
+      margin-top: 10px;
+      width: 30px;
+      content: "";
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+
+  .carousel {
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 8px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ddd;
+      max-height: 15%;
+
+      padding-left: 15px;
+      padding-right: 15px;
+
+      .description {
+        float: left;
+        width: 70%;
+        text-align: left;
+
+        h4 { margin: 0; }
+      }
+
+      .date {
+        float: right;
+        width: 30%;
+        text-align: right;
+
+        p { margin: 0; }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #101010;
+
+  .footer-content {
+    padding: 60px 0 40px 0;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+}
+
+amp-sidebar {
+  width: 30%;
+  padding: 10px;
+  padding-top:  50px;
+
+  .logo {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .horizontal_line {
+    border-bottom: 1.5px #CFD8DC solid;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      text-align: center;
+      padding-bottom: 15px;
+
+      a {
+        color: #111;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

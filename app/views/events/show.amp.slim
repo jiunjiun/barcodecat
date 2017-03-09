@@ -1,0 +1,15 @@
+== render 'slider'
+
+- event.products.each do |product|
+  /! IMAGE BLOCK
+  .products
+    .row
+      .product_image class="product_img_#{product.id}"
+    .desc.text-right
+      .heading
+        h2= product.name
+        span.lead= product.desc
+      == link_to product.url, class: 'button border rounded goto_buy', target: '_blank' do
+        span= t('helpers.buy')
+
+== render 'more'

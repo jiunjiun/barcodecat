@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="amphtml" href="<%= event_url(Event.where(enable: true).last.link_name, format: :amp) %>">
 
   <%= render partial: 'common/favicon' %>
 
@@ -14,6 +15,7 @@
   <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
 
   <%= stylesheet_link_tag  'paralax', media: 'all' %>
+  <%= render 'common_js/mixpanel' %>
 </head>
 <body class="wide" data-animation-icon-path="/images/">
   <!-- WRAPPER -->

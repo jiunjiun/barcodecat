@@ -6,3 +6,5 @@
 #= require Polo/vender/plugins-compressed
 #= require Polo/theme-functions
 #= require Polo/custom
+
+#= require mixpanel_track

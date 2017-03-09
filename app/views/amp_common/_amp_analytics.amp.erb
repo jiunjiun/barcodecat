@@ -1,0 +1,17 @@
+<% if Rails.env.production? %>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "<%= Settings.google.analytics_code %>"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+<% end %>

@@ -1,0 +1,15 @@
+/! BLOG
+section.more
+  .heading.text-center
+    h1.text-medium 更多推薦
+    span.lead
+  .carousel
+    amp-carousel layout="responsive" type="slides" width="300" height="175" autoplay="autoplay" delay="2000"
+      - events.each do |event|
+        == link_to event_path(event.link_name, format: :amp), target: '_blank' do
+          amp-img alt="#{event.title}" src="#{event.meta.image.small}" width="300" height="175" layout="responsive"
+          .caption
+            .description
+              h4.title= event.title
+            .date
+              p= l event.updated_at, format: :mmddyy
