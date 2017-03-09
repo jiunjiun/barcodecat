@@ -1,0 +1,10 @@
+amp-sidebar#sidebar layout="nodisplay" side="right"
+  .logo
+    amp-img alt="home" src="#{asset_path('logos/logo@96.png')}" tabindex="0" width="96" height="96" layout="responsive"
+  .horizontal_line
+  ul
+    li
+      == link_to root_path do
+        amp-img alt="home" src="#{asset_path('fa-icons/fa-home.png')}" tabindex="0" width="20" height="20"
+    li
+      == link_to t('top_recommend'), root_path(anchor: 'top_recommend')

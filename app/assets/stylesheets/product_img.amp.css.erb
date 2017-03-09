@@ -1,0 +1,6 @@
+<% Product.all.each do |product| %>
+  .product_img_<%= product.id %> {
+    height: 600px;
+    background:url(<%= product.banner.url %>) 50% 50% / cover no-repeat;
+  }
+<% end %>

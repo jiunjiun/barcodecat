@@ -1,0 +1,29 @@
+<!doctype html>
+<html ⚡ lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="canonical" href="<%= event_url(Event.where(enable: true).last.link_name) %>" />
+
+  <%= display_meta_tags %>
+
+  <!-- LOAD GOOGLE FONTS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800" />
+
+  <% if Rails.application.assets && Rails.application.assets['paralax.amp'] %>
+  <style amp-custom><%= Rails.application.assets['paralax.amp'].to_s.html_safe %></style>
+  <% else %>
+  <style amp-custom><%= File.read("#{Rails.root}/public#{stylesheet_path('paralax.amp', host: nil)}").html_safe %></style>
+  <% end %>
+
+  <%= render 'amp_common/amp_main' %>
+</head>
+<body>
+  <%= render 'amp_common/nav' %>
+  <%= render 'amp_common/sidebar' %>
+  <%= yield %>
+  <%= render 'amp_common/footer' %>
+
+  <%= render 'amp_common/amp_analytics' %>
+</body>
+</html>
