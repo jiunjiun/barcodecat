@@ -16,6 +16,11 @@
 
   <%= stylesheet_link_tag  'paralax', media: 'all' %>
   <%= render 'common_js/mixpanel' %>
+
+  <!-- LD JSON -->
+  <script type="application/ld+json">
+    <%= render('schemas/event.json', ).html_safe %>
+  </script>
 </head>
 <body class="wide" data-animation-icon-path="/images/">
   <!-- WRAPPER -->

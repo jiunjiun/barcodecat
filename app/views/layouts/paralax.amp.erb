@@ -17,6 +17,11 @@
   <% end %>
 
   <%= render 'amp_common/amp_main' %>
+
+  <!-- LD JSON -->
+  <script type="application/ld+json">
+    <%= render('schemas/event.json', ).html_safe %>
+  </script>
 </head>
 <body>
   <%= render 'amp_common/nav' %>
