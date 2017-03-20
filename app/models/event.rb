@@ -6,5 +6,12 @@ class Event < ApplicationRecord
 
   accepts_nested_attributes_for :meta
 
+  default_scope { where(hidden: false) }
+
   scope :last10, -> { where(enable: true).order(created_at: :desc).last(10) }
+
+  def hidden!
+    self.hidden = true
+    save
+  end
 end

@@ -32,7 +32,7 @@ class Admin::EventsController < AdminController
     if event.enable
       redirect_to admin_events_path, alert: t('helpers.destroy_fail')
     else
-      event.destroy
+      event.hidden!
       redirect_to admin_events_path, notice: t('helpers.successfully_destroy')
     end
   end

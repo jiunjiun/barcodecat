@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215123106) do
+ActiveRecord::Schema.define(version: 20170320030240) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170215123106) do
     t.boolean  "enable",                   default: false
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
+    t.boolean  "hidden",                   default: false
   end
 
   create_table "meta", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -56,9 +57,10 @@ ActiveRecord::Schema.define(version: 20170215123106) do
     t.integer  "index"
     t.string   "banner"
     t.integer  "event_id"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.integer  "banner_style",               default: 1
+    t.boolean  "hidden",                     default: false
     t.index ["event_id"], name: "index_products_on_event_id", using: :btree
   end
 
